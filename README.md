@@ -24,4 +24,10 @@ FATA[0000] Error: client and server don't have same version (client : 1.17, serv
 ```
 http://qiita.com/koudaiii/items/3dd26448ec3210338bba
 
+## to check whether to run docker correctly
+```
+$ boot2docker status
+$ docker version
+```
+
 
