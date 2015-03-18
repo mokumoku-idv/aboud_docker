@@ -38,9 +38,10 @@ above command run on ubuntu-docker.Process will not alive future.
 if will alive,i must use daemon
 
 *** run daemon
-```
+
 
 ### for example
+
 ```
 {15-03-18 10:05}[ruby-2.1.0]server:~/nurse@pager✗✗✗✗✗✗ shiratsu% docker run ubuntu:14.04 /bin/echo 'Hello world'
 Hello world
@@ -53,6 +54,6 @@ CONTAINER ID        IMAGE               COMMAND                CREATED          
 839feb723ad8        ubuntu:14.04        "/bin/sh -c 'while t   About an hour ago   Up 2 seconds                            tender_nobel
 ```
 
-```
+
 
 
