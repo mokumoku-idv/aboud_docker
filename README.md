@@ -54,6 +54,35 @@ CONTAINER ID        IMAGE               COMMAND                CREATED          
 839feb723ad8        ubuntu:14.04        "/bin/sh -c 'while t   About an hour ago   Up 2 seconds                            tender_nobel
 ```
 
+## to login docker-hub by command
+```
+{15-03-19 11:58}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% docker login
+Username: xxxxx
+Password:
+Email: xxxxx@yahoo.co.jp
+FATA[0033] Error response from daemon: Server Error: Post https://index.docker.io/v1/users/: dial tcp: lookup index.docker.io on 192.168.1.1:53: read udp 192.168.1.1:53: i/o timeout
+```
+* if above error produced,you should restart boot2docker
+```
+{15-03-19 11:59}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% boot2docker stop
+{15-03-19 14:29}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% boot2docker start
+Waiting for VM and Docker daemon to start...
+.................ooo
+Started.
+Writing /Users/shiratsu/.boot2docker/certs/boot2docker-vm/ca.pem
+Writing /Users/shiratsu/.boot2docker/certs/boot2docker-vm/cert.pem
+Writing /Users/shiratsu/.boot2docker/certs/boot2docker-vm/key.pem
+Your environment variables are already set correctly.
+
+{15-03-19 14:30}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% docker login
+Username: xxxxx
+Password:
+Email: xxxxxx@yahoo.co.jp
+Login Succeeded
+```
+### reference
+https://github.com/docker/docker/issues/11490#issuecomment-83336706
+
 
 
 
