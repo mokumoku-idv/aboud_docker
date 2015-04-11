@@ -80,6 +80,35 @@ Password:
 Email: xxxxxx@yahoo.co.jp
 Login Succeeded
 ```
+
+## but can not login
+you should run following command.because docker is differnt from each other env.
+```
+{15-04-11 13:46}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% boot2docker delete
+{15-04-11 13:47}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% boot2docker init
+{15-04-11 13:48}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% boot2docker up
+Waiting for VM and Docker daemon to start...
+........................ooooooooooooooooooo
+Started.
+Writing /Users/shiratsu/.boot2docker/certs/boot2docker-vm/ca.pem
+Writing /Users/shiratsu/.boot2docker/certs/boot2docker-vm/cert.pem
+Writing /Users/shiratsu/.boot2docker/certs/boot2docker-vm/key.pem
+
+To connect the Docker client to the Docker daemon, please set:
+    export DOCKER_HOST=tcp://192.168.59.104:2376
+    export DOCKER_CERT_PATH=/Users/shiratsu/.boot2docker/certs/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1
+
+{15-04-11 13:48}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% vim .zshrc
+{15-04-11 13:49}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% docker ps
+^C%                                                                                                                                                                        {15-04-11 13:49}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% source .zshrc
+{15-04-11 13:49}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+{15-04-11 13:49}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu% docker login
+Username (shiratsu):
+Login Succeeded
+{15-04-11 13:50}[ruby-2.1.0]server:~@master✗✗✗✗✗✗ shiratsu%
+```
 ### reference
 https://github.com/docker/docker/issues/11490#issuecomment-83336706
 
